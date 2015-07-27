@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js ie ie7" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js ie ie8" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="no-js ie ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Delegated Properties</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="Shortcut Icon" href="/assets/images/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/apple-touch-icon-144x144.png" />
+<link rel="stylesheet" href="/css/styles.css">
+<!-- begin Convert Experiments code--><script type="text/javascript">var _conv_host = (("https:" == document.location.protocol) ? "https://d9jmv9u00p0mv.cloudfront.net" : "http://cdn-1.convertexperiments.com");document.write(decodeURIComponent("%3Cscript src='" + _conv_host + "/js/10013947-10013329.js' type='text/javascript'%3E%3C/script%3E"));</script><!-- end Convert Experiments code -->
+<script src="/js/vendor/requirejs/require.js"></script>
+<script src="/js/config/bootstrap.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P98"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+<!-- End Google Tag Manager -->
+<!-- CrazyEgg -->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/6939.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<!-- End CrazyEgg -->
+
+
+<div class="global-layout">
+
+    <header class="global-header">
+
+    <div class="global-header-panel">
+        <div class="g-layout">
+            <a class="global-header-logo" href="/">Kotlin</a>
+
+            
+                
+            
+
+            <nav role="navigation" class="global-nav">
+    
+
+    
+        
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+
+        <a href="/docs/reference/"
+           class="nav-item is_active"
+        >
+            Learn
+        </a>
+    
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        <a href="/contribute.html"
+           class="nav-item "
+        >
+            Contribute
+        </a>
+    
+        
+        
+        
+        
+
+        
+
+        
+
+        
+            
+        
+
+        <a href="http://try.kotlinlang.org"
+           class="nav-item "
+        >
+            Try Online
+        </a>
+    
+        
+        
+        
+        
+
+        
+            
+
+    
+        <div class="extra-nav download-button">
+            <a href="/#get-kotlin" class="get-kotlin-button">
+                Get Kotlin
+                <span class="version">(0.12.613)</span>
+            </a>
+        </div>
+    
+</nav>
+
+        </div>
+    </div>
+    
+    <div class="g-layout">
+        
+    </div>
+</header>
+
+    <div class="g-layout global-content">
+        <div class="g-grid">
+
+    <div class="g-12">
+        
+    
+
+    <nav role="navigation" class="docs-nav">
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                    <a href="/docs/reference/" class="nav-item is_active">
+                        <span class="nav-item-text">
+                            Reference
+                        </span>
+                    </a>
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/tutorials/" class="nav-item">
+                    <span class="nav-item-text">
+                        Tutorials
+                    </span>
+                </a>
+
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/videos.html" class="nav-item">
+                    <span class="nav-item-text">
+                        Videos
+                    </span>
+                </a>
+
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/events.html" class="nav-item">
+                    <span class="nav-item-text">
+                        Events
+                    </span>
+                </a>
+
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/resources.html" class="nav-item">
+                    <span class="nav-item-text">
+                        More resources
+                    </span>
+                </a>
+
+            
+            </div>
+        
+    </nav>
+
+
+    </div>
+
+    <aside class="g-3">
+        <div id="reference-nav">
+            
+
+
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+            
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+
+
+<nav role="navigation" class="side-tree-nav">
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Getting Started">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Getting Started</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/basic-syntax.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Basic Syntax</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/idioms.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Idioms</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/coding-conventions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Coding Conventions</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Basics">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Basics</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/basic-types.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Basic Types</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/packages.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Packages</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/control-flow.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Control Flow</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/returns.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Returns and Jumps</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _opened"
+         data-id="Classes and Objects">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Classes and Objects</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Classes and Inheritance</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/properties.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Properties and Fields</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/interfaces.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Interfaces</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/visibility-modifiers.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Visibility Modifiers</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/extensions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Extensions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/data-classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Data Classes</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/generics.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Generics</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/nested-classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Nested Classes</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/enum-classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Enum Classes</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/object-declarations.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Objects</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/delegation.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Delegation</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <div class="tree-item-title tree-leaf-title js-item-title js-leaf-title is_active">
+                    <div class="marker"></div>
+                    <div class="text">Delegated Properties</div>
+                </div>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Functions and Lambdas">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Functions and Lambdas</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/functions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Functions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/lambdas.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Lambdas</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/inline-functions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Inline Functions</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Other">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Other</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/multi-declarations.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Multi-Declarations</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/ranges.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Ranges</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/typecasts.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Type Checks and Casts</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/this-expressions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">This expressions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/equality.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Equality</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/operator-overloading.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Operator overloading</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/null-safety.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Null Safety</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/exceptions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Exceptions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/annotations.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Annotations</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/reflection.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Reflection</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/type-safe-builders.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Type-Safe Builders</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/dynamic-type.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Dynamic Type</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Reference">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Reference</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/api/latest/jvm/stdlib/index.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">API Reference</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/grammar.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Grammar</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Interop">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Interop</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/java-interop.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Java Interop</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Tools">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Tools</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/kotlin-doc.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Documenting Kotlin Code</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-maven.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Maven</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-ant.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Ant</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-griffon.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Griffon</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-gradle.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Gradle</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="FAQ">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">FAQ</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/faq.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">FAQ</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/comparison-to-java.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Comparison to Java</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/comparison-to-scala.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Comparison to Scala</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+</nav>
+
+            <a href="/docs/kotlin-docs.pdf" class="reference-pdf-link">
+                <span class="icon"></span>
+                <span class="text">Full Kotlin Reference</span>
+            </a>
+        </div>
+    </aside>
+
+    <article role="main" class="page-content g-9">
+        
+
+
+<a href="https://github.com/JetBrains/kotlin-web-site/edit/master/docs/reference/delegated-properties.md"
+   class="page-link-to-github"
+   target="_blank"
+   title="Edit this page on GitHub">
+        <i class="github-icon"></i>
+        <span class="text">Edit Page</span>
+</a>
+
+        <h1 id="delegated-properties">Delegated Properties<a href="#delegated-properties" class="anchor"></a></h1>
+
+<p>There are certain common kinds of properties, that, though we can implement them manually every time we need them, 
+would be very nice to implement once and for all, and put into a library. Examples include</p>
+
+<ul>
+  <li>lazy properties: the value gets computed only upon first access,</li>
+  <li>observable properties: listeners get notified about changes to this property,</li>
+  <li>storing properties in a map, not in separate field each.</li>
+</ul>
+
+<p>To cover these (and other) cases, Kotlin supports <em>delegated properties</em>:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="py">p</span><span class="p">:</span> <span class="n">String</span> <span class="k">by</span> <span class="n">Delegate</span><span class="p">()</span>
+<span class="p">}</span></code></pre>
+
+<p>The syntax is: <code>val/var &lt;property name&gt;: &lt;Type&gt; by &lt;expression&gt;</code>. The expression after <em class="keyword">by</em> is the <em>delegate</em>, 
+because <code>get()</code> (and <code>set()</code>) corresponding to the property will be delegated to it.<br />
+Property delegates don’t have to implement any interface, but they have to provide a <code>get()</code> function (and <code>set()</code> — for <em class="keyword">var</em>’s). 
+For example:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">Delegate</span> <span class="p">{</span>
+  <span class="k">fun</span> <span class="nf">get</span><span class="p">(</span><span class="n">thisRef</span><span class="p">:</span> <span class="n">Any</span><span class="p">?,</span> <span class="n">prop</span><span class="p">:</span> <span class="n">PropertyMetadata</span><span class="p">):</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s">&quot;$thisRef, thank you for delegating &#39;${prop.name}&#39; to me!&quot;</span>
+  <span class="p">}</span>
+ 
+  <span class="k">fun</span> <span class="nf">set</span><span class="p">(</span><span class="n">thisRef</span><span class="p">:</span> <span class="n">Any</span><span class="p">?,</span> <span class="n">prop</span><span class="p">:</span> <span class="n">PropertyMetadata</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;$value has been assigned to &#39;${prop.name} in $thisRef.&#39;&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<p>When we read from <code>p</code> that delegates to an instance of <code>Delegate</code>, the <code>get()</code> function from <code>Delegate</code> is called, 
+so that its first parameter is the object we read <code>p</code> from and the second parameter holds a description of <code>p</code> itself 
+(e.g. you can take its name). For example:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">val</span> <span class="py">e</span> <span class="p">=</span> <span class="n">Example</span><span class="p">()</span>
+<span class="n">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">p</span><span class="p">)</span></code></pre>
+
+<p>This prints </p>
+
+<pre>Example@33a17727, thank you for delegating ‘p’ to me!
+</pre>
+
+<p>Similarly, when we assign to <code>p</code>, the <code>set()</code> function is called. The first two parameters are the same, and the third holds the value being assigned:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="n">e</span><span class="p">.</span><span class="n">p</span> <span class="p">=</span> <span class="s">&quot;NEW&quot;</span></code></pre>
+
+<p>This prints</p>
+
+<pre>NEW has been assigned to ‘p’ in Example@33a17727.
+</pre>
+
+<h2 id="property-delegate-requirements">Property Delegate Requirements<a href="#property-delegate-requirements" class="anchor"></a></h2>
+
+<p>Here we summarize requirements to delegate objects. </p>
+
+<p>For a <strong>read-only</strong> property (i.e. a <em class="keyword">val</em>), a delegate has to provide a function named <code>get</code> that takes the following parameters:</p>
+
+<ul>
+  <li>receiver — must be the same or a supertype of the <em>property owner</em> (for extension properties — the type being extended),</li>
+  <li>metadata — must be of type <code>PropertyMetadata</code> or its supertype,</li>
+</ul>
+
+<p>this function must return the same type as property (or its subtype).</p>
+
+<p>For a <strong>mutable</strong> property (a <em class="keyword">var</em>), a delegate has to <em>additionally</em> provide a function named <code>set</code> that takes the following parameters:</p>
+
+<ul>
+  <li>receiver — same as for <code>get()</code>,</li>
+  <li>metadata — same as for <code>get()</code>,</li>
+  <li>new value — must be of the same type as a property or its subtype.</li>
+</ul>
+
+<h2 id="standard-delegates">Standard Delegates<a href="#standard-delegates" class="anchor"></a></h2>
+
+<p>The <code>kotlin.properties.Delegates</code> object from the standard library provides factory methods for several useful kinds of delegates.</p>
+
+<h3 id="lazy">Lazy<a href="#lazy" class="anchor"></a></h3>
+
+<p><code>Delegates.lazy()</code> is a function that takes a lambda and returns a delegate that implements a lazy property: 
+the first call to <code>get()</code> executes the lambda passed to <code>lazy()</code> and remembers the result, 
+subsequent calls to <code>get()</code> simply return the remembered result. </p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">import</span> <span class="nn">kotlin.properties.Delegates</span>
+ 
+<span class="k">val</span> <span class="py">lazy</span><span class="p">:</span> <span class="n">String</span> <span class="k">by</span> <span class="n">Delegates</span><span class="p">.</span><span class="n">lazy</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;computed!&quot;</span><span class="p">)</span>
+    <span class="s">&quot;Hello&quot;</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lazy</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lazy</span><span class="p">)</span>
+<span class="p">}</span></code></pre>
+
+<p>If you want <strong>thread safety</strong>, use <code>blockingLazy()</code>: it works the same way, but guarantees that the values will be 
+computed only in one thread, and that all threads will see the same value.</p>
+
+<h3 id="observable">Observable<a href="#observable" class="anchor"></a></h3>
+
+<p><code>Delegates.observable()</code> takes two arguments: initial value and a handler for modifications. 
+The handler gets called every time we assign to the property (before the assignment is performed). It has three
+parameters: a property being assigned to, the old value and the new one:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">User</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="k">by</span> <span class="n">Delegates</span><span class="p">.</span><span class="n">observable</span><span class="p">(</span><span class="s">&quot;&lt;no name&gt;&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">d</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span> <span class="p">-&gt;</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;$old -&gt; $new&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">User</span><span class="p">()</span>
+    <span class="n">user</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&quot;first&quot;</span>
+    <span class="n">user</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">&quot;second&quot;</span>
+<span class="p">}</span></code></pre>
+
+<p>This example prints</p>
+
+<pre>&lt;no name&gt; -&gt; first
+first -&gt; second
+</pre>
+
+<p>If you want to be able to intercept an assignment and “veto” it, use <code>vetoable()</code> instead of <code>observable()</code>.</p>
+
+<h3 id="not-null">Not-Null<a href="#not-null" class="anchor"></a></h3>
+
+<p>Sometimes we have a non-null <em class="keyword">var</em>, but we don’t have an appropriate value to assign to it in the constructor, 
+i.e. it must be assigned later. The problem is that you can’t have an uninitialized non-abstract property in Kotlin:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="py">bar</span><span class="p">:</span> <span class="n">Bar</span> <span class="c1">// ERROR: must be initialized</span>
+<span class="p">}</span></code></pre>
+
+<p>We could initialize it with <em class="keyword">null</em>, but then we’d have to check every time we access it.</p>
+
+<p><code>Delegates.notNull()</code> can solve this problem:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="py">bar</span><span class="p">:</span> <span class="n">Bar</span> <span class="k">by</span> <span class="n">Delegates</span><span class="p">.</span><span class="n">notNull</span><span class="p">()</span>
+<span class="p">}</span></code></pre>
+
+<p>If this property is read before being written to for the first time, it throws an exception, after the first assignment it works as expected.</p>
+
+<h3 id="storing-properties-in-a-map">Storing Properties in a Map<a href="#storing-properties-in-a-map" class="anchor"></a></h3>
+
+<p><code>Delegates.mapVal()</code> takes a map instance and returns a delegate that reads property values from this map, using property name as a key.
+There are many use cases of this kind in applications like parsing JSON or doing other “dynamic” things:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="k">val</span> <span class="py">map</span><span class="p">:</span> <span class="n">Map</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Any</span><span class="p">?&gt;)</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span> <span class="k">by</span> <span class="n">Delegates</span><span class="p">.</span><span class="n">mapVal</span><span class="p">(</span><span class="n">map</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">age</span><span class="p">:</span> <span class="n">Int</span>     <span class="k">by</span> <span class="n">Delegates</span><span class="p">.</span><span class="n">mapVal</span><span class="p">(</span><span class="n">map</span><span class="p">)</span>
+<span class="p">}</span></code></pre>
+
+<p>In this example, the constructor takes a map:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span><span class="n">mapOf</span><span class="p">(</span>
+    <span class="s">&quot;name&quot;</span> <span class="n">to</span> <span class="s">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="s">&quot;age&quot;</span>  <span class="n">to</span> <span class="m">25</span>
+<span class="p">))</span></code></pre>
+
+<p>Delegates take values from this map (by the string keys – names of properties):</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="n">println</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Prints &quot;John Doe&quot;</span>
+<span class="n">println</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>  <span class="c1">// Prints 25</span></code></pre>
+
+<p>For <em class="keyword">var</em>’s we can use <code>mapVar()</code> (note that it takes a <code>MutableMap</code> instead of read-only <code>Map</code>).</p>
+
+    </article>
+</div>
+
+<script>
+require(['page/reference'], function(page) {
+    page();
+});
+</script>
+    </div>
+
+</div>
+
+<footer role="contentinfo" class="global-footer">
+
+    <div class="global-footer-terms">
+        <div class="g-layout">
+
+            <div class="terms-copyright">
+                &copy; 2000&ndash;2015 JetBrains. All rights reserved
+            </div>
+
+            <div class="terms-sponsor">
+                Sponsored and developed by <a href="http://jetbrains.com" class="sponsor sponsor_jetbrains" target="_blank">JetBrains</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

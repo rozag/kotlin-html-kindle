@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js ie ie7" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js ie ie8" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="no-js ie ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Visibility Modifiers</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="Shortcut Icon" href="/assets/images/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/apple-touch-icon-144x144.png" />
+<link rel="stylesheet" href="/css/styles.css">
+<!-- begin Convert Experiments code--><script type="text/javascript">var _conv_host = (("https:" == document.location.protocol) ? "https://d9jmv9u00p0mv.cloudfront.net" : "http://cdn-1.convertexperiments.com");document.write(decodeURIComponent("%3Cscript src='" + _conv_host + "/js/10013947-10013329.js' type='text/javascript'%3E%3C/script%3E"));</script><!-- end Convert Experiments code -->
+<script src="/js/vendor/requirejs/require.js"></script>
+<script src="/js/config/bootstrap.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P98"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+<!-- End Google Tag Manager -->
+<!-- CrazyEgg -->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/6939.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<!-- End CrazyEgg -->
+
+
+<div class="global-layout">
+
+    <header class="global-header">
+
+    <div class="global-header-panel">
+        <div class="g-layout">
+            <a class="global-header-logo" href="/">Kotlin</a>
+
+            
+                
+            
+
+            <nav role="navigation" class="global-nav">
+    
+
+    
+        
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+
+        <a href="/docs/reference/"
+           class="nav-item is_active"
+        >
+            Learn
+        </a>
+    
+        
+        
+        
+        
+
+        
+
+        
+
+        
+
+        <a href="/contribute.html"
+           class="nav-item "
+        >
+            Contribute
+        </a>
+    
+        
+        
+        
+        
+
+        
+
+        
+
+        
+            
+        
+
+        <a href="http://try.kotlinlang.org"
+           class="nav-item "
+        >
+            Try Online
+        </a>
+    
+        
+        
+        
+        
+
+        
+            
+
+    
+        <div class="extra-nav download-button">
+            <a href="/#get-kotlin" class="get-kotlin-button">
+                Get Kotlin
+                <span class="version">(0.12.613)</span>
+            </a>
+        </div>
+    
+</nav>
+
+        </div>
+    </div>
+    
+    <div class="g-layout">
+        
+    </div>
+</header>
+
+    <div class="g-layout global-content">
+        <div class="g-grid">
+
+    <div class="g-12">
+        
+    
+
+    <nav role="navigation" class="docs-nav">
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                    <a href="/docs/reference/" class="nav-item is_active">
+                        <span class="nav-item-text">
+                            Reference
+                        </span>
+                    </a>
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/tutorials/" class="nav-item">
+                    <span class="nav-item-text">
+                        Tutorials
+                    </span>
+                </a>
+
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/videos.html" class="nav-item">
+                    <span class="nav-item-text">
+                        Videos
+                    </span>
+                </a>
+
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/events.html" class="nav-item">
+                    <span class="nav-item-text">
+                        Events
+                    </span>
+                </a>
+
+            
+            </div>
+        
+            
+            
+
+            <div class="nav-item-wrap">
+            
+                <a href="/docs/resources.html" class="nav-item">
+                    <span class="nav-item-text">
+                        More resources
+                    </span>
+                </a>
+
+            
+            </div>
+        
+    </nav>
+
+
+    </div>
+
+    <aside class="g-3">
+        <div id="reference-nav">
+            
+
+
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+            
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+        
+            
+        
+
+        
+    
+
+
+
+<nav role="navigation" class="side-tree-nav">
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Getting Started">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Getting Started</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/basic-syntax.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Basic Syntax</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/idioms.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Idioms</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/coding-conventions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Coding Conventions</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Basics">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Basics</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/basic-types.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Basic Types</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/packages.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Packages</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/control-flow.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Control Flow</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/returns.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Returns and Jumps</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _opened"
+         data-id="Classes and Objects">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Classes and Objects</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Classes and Inheritance</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/properties.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Properties and Fields</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/interfaces.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Interfaces</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <div class="tree-item-title tree-leaf-title js-item-title js-leaf-title is_active">
+                    <div class="marker"></div>
+                    <div class="text">Visibility Modifiers</div>
+                </div>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/extensions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Extensions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/data-classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Data Classes</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/generics.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Generics</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/nested-classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Nested Classes</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/enum-classes.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Enum Classes</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/object-declarations.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Objects</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/delegation.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Delegation</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/delegated-properties.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Delegated Properties</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Functions and Lambdas">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Functions and Lambdas</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/functions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Functions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/lambdas.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Lambdas</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/inline-functions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Inline Functions</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Other">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Other</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/multi-declarations.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Multi-Declarations</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/ranges.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Ranges</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/typecasts.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Type Checks and Casts</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/this-expressions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">This expressions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/equality.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Equality</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/operator-overloading.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Operator overloading</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/null-safety.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Null Safety</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/exceptions.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Exceptions</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/annotations.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Annotations</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/reflection.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Reflection</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/type-safe-builders.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Type-Safe Builders</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/dynamic-type.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Dynamic Type</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Reference">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Reference</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/api/latest/jvm/stdlib/index.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">API Reference</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/grammar.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Grammar</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Interop">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Interop</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/java-interop.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Java Interop</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="Tools">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">Tools</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/kotlin-doc.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Documenting Kotlin Code</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-maven.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Maven</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-ant.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Ant</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-griffon.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Griffon</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/using-gradle.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Using Gradle</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+    
+
+    <div class="tree-item tree-branch js-item js-branch _closed"
+         data-id="FAQ">
+
+        <div class="tree-item-title tree-branch-title js-item-title js-branch-title">
+            <div class="marker"></div>
+            <div class="text">FAQ</div>
+        </div>
+
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/faq.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">FAQ</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/comparison-to-java.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Comparison to Java</span></a>
+            
+            </div>
+        
+            
+            
+                
+                
+            
+
+            
+            
+
+            <div class="tree-item tree-leaf js-item js-leaf">
+            
+                <a href="/docs/reference/comparison-to-scala.html"
+                   class="tree-item-title tree-leaf-title js-item-title js-leaf-title "
+                   ><span class="marker"></span><span class="text">Comparison to Scala</span></a>
+            
+            </div>
+        
+
+    </div>
+
+    
+
+</nav>
+
+            <a href="/docs/kotlin-docs.pdf" class="reference-pdf-link">
+                <span class="icon"></span>
+                <span class="text">Full Kotlin Reference</span>
+            </a>
+        </div>
+    </aside>
+
+    <article role="main" class="page-content g-9">
+        
+
+
+<a href="https://github.com/JetBrains/kotlin-web-site/edit/master/docs/reference/visibility-modifiers.md"
+   class="page-link-to-github"
+   target="_blank"
+   title="Edit this page on GitHub">
+        <i class="github-icon"></i>
+        <span class="text">Edit Page</span>
+</a>
+
+        <h1 id="visibility-modifiers">Visibility Modifiers<a href="#visibility-modifiers" class="anchor"></a></h1>
+
+<p>Classes, objects, interfaces, constructors, functions, properties and their setters can have <em>visibility modifiers</em>.
+(Getters always have the same visibility as the property.) 
+There are four visibility modifiers in Kotlin:</p>
+
+<ul>
+  <li><code>private</code> — visible only in the declaring scope and its subscopes (inside the same module);</li>
+  <li><code>protected</code> — (applicable only to class/interface members) like <code>private</code>, but also visible in subclasses;</li>
+  <li><code>internal</code> — (used by default) visible everywhere within the same module (if the owner of declaring scope is visible);</li>
+  <li><code>public</code> — visible everywhere (if the owner of declaring scope is visible).</li>
+</ul>
+
+<p><strong>NOTE</strong>: Functions <em>with expression bodies</em> and all properties declared <code>public</code> must always specify return types explicitly. 
+This is required so that we do not accidentally change a type that is a part of a public API by merely
+altering the implementation.</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">public</span> <span class="k">val</span> <span class="py">foo</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">5</span>    <span class="c1">// explicit return type required</span>
+<span class="k">public</span> <span class="k">fun</span> <span class="nf">bar</span><span class="p">():</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">5</span>  <span class="c1">// explicit return type required</span>
+<span class="k">public</span> <span class="k">fun</span> <span class="nf">bar</span><span class="p">()</span> <span class="p">{}</span>        <span class="c1">// block body: return type is Unit and can&#39;t be changed accidentally, so not required</span></code></pre>
+
+<p>Below please find explanations of these for different type of declaring scopes.  </p>
+
+<h2 id="packages">Packages<a href="#packages" class="anchor"></a></h2>
+
+<p>Functions, properties and classes, objects and interfaces can be declared on the “top-level”, i.e. directly inside a package:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="c1">// file name: example.kt</span>
+<span class="k">package</span> <span class="nn">foo</span>
+
+<span class="k">fun</span> <span class="nf">baz</span><span class="p">()</span> <span class="p">{}</span>
+<span class="k">class</span> <span class="nc">Bar</span> <span class="p">{}</span></code></pre>
+
+<ul>
+  <li>If you do not specify any visibility modifier, <code>internal</code> is used by default, which means that your declarations will be 
+visible everywhere within the same module;  </li>
+  <li>If you mark a declaration <code>private</code>, it will only be visible inside this package and its subpackages, and only within 
+the same module;</li>
+  <li>If you mark it <code>public</code>, it is visible everywhere;</li>
+  <li><code>protected</code> is not available for top-level declarations.</li>
+</ul>
+
+<p>Examples:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="c1">// file name: example.kt</span>
+<span class="k">package</span> <span class="nn">foo</span>
+
+<span class="k">private</span> <span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{}</span> <span class="c1">// visible inside this package and subpackaged</span>
+
+<span class="k">public</span> <span class="k">var</span> <span class="py">bar</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">5</span> <span class="c1">// property is visible everywhere</span>
+    <span class="k">private</span> <span class="k">set</span>         <span class="c1">// setter is visible only in this package and subpackages</span>
+    
+<span class="k">internal</span> <span class="k">val</span> <span class="py">baz</span> <span class="p">=</span> <span class="m">6</span>    <span class="c1">// visible inside the same module, the modifier can be omitted    </span></code></pre>
+
+<h2 id="classes-and-interfaces">Classes and Interfaces<a href="#classes-and-interfaces" class="anchor"></a></h2>
+
+<p>When declared inside a class:</p>
+
+<ul>
+  <li><code>private</code> means visible inside this class only (including all its members);</li>
+  <li><code>protected</code> — same as <code>private</code> + visible in subclasses too;</li>
+  <li><code>internal</code> — any client <em>inside this module</em> who sees the declaring class sees its <code>internal</code> members;</li>
+  <li><code>public</code> — any client who sees the declaring class sees its <code>public</code> members.</li>
+</ul>
+
+<p><em>NOTE</em> for Java users: outer class does not see private members of its inner classes in Kotlin.</p>
+
+<p>Examples:</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">open</span> <span class="k">class</span> <span class="nc">Outer</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">val</span> <span class="py">a</span> <span class="p">=</span> <span class="m">1</span>
+    <span class="k">protected</span> <span class="k">val</span> <span class="py">b</span> <span class="p">=</span> <span class="m">2</span>
+    <span class="k">val</span> <span class="py">c</span> <span class="p">=</span> <span class="m">3</span> <span class="c1">// internal by default</span>
+    <span class="k">public</span> <span class="k">val</span> <span class="py">d</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">4</span> <span class="c1">// return type required</span>
+    
+    <span class="k">protected</span> <span class="k">class</span> <span class="nc">Nested</span> <span class="p">{</span>
+        <span class="k">public</span> <span class="k">val</span> <span class="py">e</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">5</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Subclass</span> <span class="p">:</span> <span class="n">Outer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// a is not visible</span>
+    <span class="c1">// b, c and d are visible</span>
+    <span class="c1">// Nested and e are visible</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Unrelated</span><span class="p">(</span><span class="n">o</span><span class="p">:</span> <span class="n">Outer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// o.a, o.b are not visible</span>
+    <span class="c1">// o.c and o.d are visible (same module)</span>
+    <span class="c1">// Outer.Nested is not visible, and Nested::e is not visible either </span>
+<span class="p">}</span></code></pre>
+
+<h3 id="constructors">Constructors<a href="#constructors" class="anchor"></a></h3>
+
+<p>To specify a visibility of the primary constructor of a class, use the following syntax (note that you need to add an
+explicit <em class="keyword">constructor</em> keyword):</p>
+
+<pre><code class="code-block _highlighted lang_kotlin"><span class="k">class</span> <span class="nc">C</span> <span class="k">private</span> <span class="n">constructor</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span></code></pre>
+
+<p>Here the constructor is private. Unlike other declarations, by default, all constructors are <code>public</code>, which effectively
+amounts to them being visible everywhere where the class is visible (i.e. a constructor of an <code>internal</code> class is only 
+visible within the same module).</p>
+
+<h3 id="local-declarations">Local declarations<a href="#local-declarations" class="anchor"></a></h3>
+
+<p>Local variables, functions and classes can not have visibility modifiers.</p>
+
+    </article>
+</div>
+
+<script>
+require(['page/reference'], function(page) {
+    page();
+});
+</script>
+    </div>
+
+</div>
+
+<footer role="contentinfo" class="global-footer">
+
+    <div class="global-footer-terms">
+        <div class="g-layout">
+
+            <div class="terms-copyright">
+                &copy; 2000&ndash;2015 JetBrains. All rights reserved
+            </div>
+
+            <div class="terms-sponsor">
+                Sponsored and developed by <a href="http://jetbrains.com" class="sponsor sponsor_jetbrains" target="_blank">JetBrains</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
