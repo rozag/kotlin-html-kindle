@@ -1,4 +1,4 @@
-# Kotlin docs to HTML
+# Kotlin docs in one HTML
 Kotlin lang docs in one HTML, readable on Kindle and other devices.
 <p align="center">
     <img src="https://habrastorage.org/files/d17/902/c4c/d17902c4ce0144258e427da444bb8b42.png"/>
